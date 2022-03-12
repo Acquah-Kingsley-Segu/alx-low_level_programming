@@ -12,8 +12,8 @@ int main(void)
 	while (number < 10)
 	{
 		putchar(number + start);
-		putchar(' ');
 		putchar(',');
+		putchar(' ');
 		number++;
 	}
 	putchar('\n');
