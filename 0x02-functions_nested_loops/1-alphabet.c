@@ -4,7 +4,7 @@
  * print_alphabet - prints the alphabet to stdout
  */
 
-void print_alphabet(void)
+print_alphabet(void)
 {
 	char str = 'a';
 
