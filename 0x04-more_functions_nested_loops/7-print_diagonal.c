@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - draws a line.
+ * print_diagonal - draws a line.
  * @n: length parameter
  * Return: void
  */
@@ -9,6 +9,7 @@
 void print_diagonal(int n)
 {
 	int i = 0, j;
+
 	if (n > 0)
 	{
 		while (i < n)
@@ -17,7 +18,7 @@ void print_diagonal(int n)
 			while (j)
 			{
 				_putchar(' ');
-				j--;	
+				j--;
 			}
 			_putchar('\\');
 			i++;
