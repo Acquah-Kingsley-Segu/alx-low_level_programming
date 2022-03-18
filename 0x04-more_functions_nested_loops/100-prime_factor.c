@@ -10,17 +10,19 @@ int prime_checker(int);
 int main(void)
 {
 	long int num; /*Number to find largest prime factor*/
-	
+
 	int p = 2; /*divisor starting from first prime*/
 
 	int prime_status = 1; /*prime status*/
 
 	int lpf = 2; /*hold the largest prime factor*/
 
+	long int num1;
+
 	printf("Enter a number: ");
 	scanf("%li", &num);
 
-	long int num1 = num;
+	num1 = num;
 
 	while (num1 >= (p * p))
 	{
@@ -30,7 +32,6 @@ int main(void)
 
 			if (prime_status)
 			{
-				
 				num1 /= p;
 
 				if (p > lpf)
@@ -50,14 +51,15 @@ int main(void)
 		printf("Largest prime factor of %li is %li\n", num, num1);
 	else
 		printf("Largest prime factor of %li is %d\n", num, lpf);
+
+	return (0);
 }
 
 
 /**
- * prime_checker - checks whether a number is a prime 
- * 
- * @num: number to be checked 
- * @return 
+ * prime_checker - checks whether a number is a prime
+ * @num: number to be checked
+ * Return:
  *	1 if @num is prime
  *	0 if @num is prime
  */
@@ -74,5 +76,5 @@ int prime_checker(int num)
 		i++;
 	}
 
-	return is_prime;
+	return (is_prime);
 }
