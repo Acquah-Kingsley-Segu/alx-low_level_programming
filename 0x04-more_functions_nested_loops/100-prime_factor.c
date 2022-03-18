@@ -48,9 +48,9 @@ int main(void)
 	}
 
 	if (num1 > lpf)
-		printf("%li\n", num1);
+		printf("%li", num1);
 	else
-		printf("%d\n", lpf);
+		printf("%d", lpf);
 
 	return (0);
 }
