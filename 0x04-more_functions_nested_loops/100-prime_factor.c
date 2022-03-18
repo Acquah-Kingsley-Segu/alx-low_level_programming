@@ -9,7 +9,7 @@ int prime_checker(int);
 
 int main(void)
 {
-	long int num; /*Number to find largest prime factor*/
+	long int num = 612852475143; /*Number to find largest prime factor*/
 
 	int p = 2; /*divisor starting from first prime*/
 
@@ -18,9 +18,6 @@ int main(void)
 	int lpf = 2; /*hold the largest prime factor*/
 
 	long int num1;
-
-	printf("Enter a number: ");
-	scanf("%li", &num);
 
 	num1 = num;
 
@@ -48,9 +45,9 @@ int main(void)
 	}
 
 	if (num1 > lpf)
-		printf("%li", num1);
+		printf("%li\n", num1);
 	else
-		printf("%d", lpf);
+		printf("%d\n", lpf);
 
 	return (0);
 }
