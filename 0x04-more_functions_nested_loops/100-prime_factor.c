@@ -48,9 +48,9 @@ int main(void)
 	}
 
 	if (num1 > lpf)
-		printf("Largest prime factor of %li is %li\n", num, num1);
+		printf("%li\n", num1);
 	else
-		printf("Largest prime factor of %li is %d\n", num, lpf);
+		printf("%d\n", lpf);
 
 	return (0);
 }
