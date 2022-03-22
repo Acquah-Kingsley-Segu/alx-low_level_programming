@@ -9,9 +9,15 @@
 
 void puts_half(char *str)
 {
-	int len_2 = (strlen(str)) / 2;
 
 	int len = strlen(str);
+
+	int len_2;
+
+	if (len % 2 == 0)
+		len_2 = strlen(str) / 2;
+	else
+		len_2 = (strlen(str) - 1) / 2;
 
 	str = &str[len_2];
 
