@@ -1,11 +1,16 @@
 #include "main.h"
 #include <string.h>
 
+/**
+ * puts_half - prints characters starting from half
+ * @str: character array
+ * Return: void
+ */
 
 void puts_half(char *str)
 {
 	int len_2 = (strlen(str)) / 2;
-	
+
 	int len = strlen(str);
 
 	str = &str[len_2];
@@ -14,7 +19,7 @@ void puts_half(char *str)
 	{
 		_putchar(*str);
 		len_2++;
-		str++;	
+		str++;
 	}
 	_putchar('\n');
 }
