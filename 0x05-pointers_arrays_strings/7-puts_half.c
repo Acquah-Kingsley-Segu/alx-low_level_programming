@@ -1,6 +1,5 @@
 #include "main.h"
 #include <string.h>
-#include <stdio.h>
 
 /**
  * puts_half - prints characters starting from half
@@ -19,10 +18,6 @@ void puts_half(char *str)
 		len_2 = strlen(str) / 2;
 	else
 		len_2 = strlen(str) / 2 + 1;
-
-	printf("\nLen: %d \n", len);
-
-	printf("Len_2: %d", len_2);
 
 	str = &str[len_2];
 
