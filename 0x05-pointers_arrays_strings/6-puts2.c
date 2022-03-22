@@ -17,9 +17,10 @@ void puts2(char *str)
 	{
 		if (i % 2 == 0)
 		{
-			_putchar(48 + i);
+			_putchar(*str);
 		}
 
+		str++;
 		i++;
 	}
 
