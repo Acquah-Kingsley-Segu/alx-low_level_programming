@@ -10,39 +10,18 @@ char *leet(char *s)
 {
 	int i;
 
-	for (i = 0; *s != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		while (*s == 'a' || *s == 'A')
-		{
-			*s = 48 + 4;
-			break;
-		}
-
-		while (*s == 'e' || *s == 'E')
-		{
-			*s = 48 + 3;
-			break;
-		}
-
-		while (*s == 'o' || *s == 'O')
-		{
-			*s = 48 + 0;
-			break;
-		}
-
-		while (*s == 't' || *s == 'T')
-		{
-			*s = 48 + 7;
-			break;
-		}
-
-		while (*s == 'l' || *s == 'L')
-		{
-			*s = 48 + 1;
-			break;
-		}
-
-		s++;
+		while (s[i] == 'a' || s[i] == 'A')
+			s[i] = '4';
+		while (s[i] == 'e' || s[i] == 'E')
+			s[i] = '3';
+		while (s[i] == 'o' || s[i] == 'O')
+			s[i] = '0';
+		while (s[i] == 't' || s[i] == 'T')
+			s[i] = '7';
+		while (s[i] == 'l' || s[i] == 'L')
+			s[i] = '1';
 	}
 
 	return (s);
