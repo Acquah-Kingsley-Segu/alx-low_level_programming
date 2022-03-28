@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * _strchr - find first occurence of a character
  * @s: pointer to array
@@ -7,7 +9,7 @@
 
 char *_strchr(char *s, char c)
 {
-	char *ptr;
+	char *ptr = NULL;
 
 	int i = 0;
 
