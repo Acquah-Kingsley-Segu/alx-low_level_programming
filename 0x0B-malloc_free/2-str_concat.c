@@ -16,55 +16,41 @@ char *str_concat(char *s1, char *s2)
 {
 	char *s3;
 
-	char *deac = NULL;
+	int len1, len2, size, i = 0, num;
 
-	int len1;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	
+	for (len1 = 0; s1[len1]; len1++)
+		continue;
 
-	int len2;
+	for (len2 = 0; s2[len2]; len2++)
+		continue;
 
-	int i = 0;
+	size = len1 + len2 + 1;
 
-	int num;
+	s3 = malloc(sizeof('a') * size);
 
-	if (s1 == NULL && s2 == NULL)
-		s3 = NULL;
-	else if (s1 == NULL)
-		s3 = s2;
-	else if (s2 == NULL)
-		s3 = s1;
-	else
+
+	if (s3 == NULL)
+		return (NULL);
+
+	while (i < len1)
 	{
-		len1 = strlen(s1);
-		len2 = strlen(s2);
-
-		s3 = malloc(sizeof('a') * (len1 + len2 - 1));
-
-		if (s3 == NULL)
-			return (NULL);
-
-		while (s1[i] != '\0')
-		{
-			s3[i] = s1[i];
-			i++;
-		}
-
-		num = i;
-		i = 0;
-
-		while (s2[i] != '\0')
-		{
-			s3[num + i] = s2[i];
-			i++;
-		}
+		s3[i] = s1[i];
+		i++;
 	}
 
-	if (s3 == s1)
-		deac = s2;
+	num = i;
+	i = 0;
 
-	if (s3 == s2)
-		deac = s1;
-
-	free(deac);
+	while (i < len2)
+	{
+		s3[num + i] = s2[i];
+		i++;
+	}
 
 	return (s3);
 }
