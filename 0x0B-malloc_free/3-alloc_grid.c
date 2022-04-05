@@ -2,7 +2,7 @@
 
 /**
  * alloc_grid - allocates a 2d array
- * @width: row 
+ * @width: row
  * @height: column
  *
  * Return:
@@ -29,7 +29,7 @@ int **alloc_grid(int width, int height)
 		arr[i] = malloc(height * sizeof(int));
 
 	if (!arr[0])
-		return NULL;
+		return (NULL);
 
 	i = 0;
 
