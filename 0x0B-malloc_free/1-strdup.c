@@ -19,7 +19,7 @@ char *_strdup(char *str)
 
 	unsigned int i = 0;
 
-	if (*str == NULL)
+	if (str == NULL)
 		ptr = NULL;
 	else
 	{
