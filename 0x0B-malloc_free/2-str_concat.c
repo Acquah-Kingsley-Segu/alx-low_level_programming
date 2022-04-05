@@ -24,10 +24,13 @@ char *str_concat(char *s1, char *s2)
 
 	int num;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-
-	if (s1 && s2)
+	if (s1 == NULL && s2 == NULL)
+		s3 = NULL;
+	else if (s1 == NULL)
+		s3 = s2;
+	else if (s2 == NULL)
+		s3 = s1;
+	else
 	{
 		len1 = strlen(s1);
 		len2 = strlen(s2);
@@ -53,5 +56,6 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 
+	
 	return (s3);
 }
