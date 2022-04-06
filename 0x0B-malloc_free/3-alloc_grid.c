@@ -2,8 +2,8 @@
 
 /**
  * alloc_grid - allocates a 2d array
- * @width: row
- * @height: column
+ * @width: column
+ * @height: row
  *
  * Return:
  *	pointer to 2d array if successful
@@ -17,25 +17,30 @@ int **alloc_grid(int width, int height)
 
 	int i = 0, j;
 
-	if (width <= 0 || height <= 0)
+	if (height <= 0)
 		return (NULL);
 
-	arr = malloc(width * sizeof(int));
+	arr = (int **)malloc(height * sizeof(int));
 
 	if (!arr)
+	{
+		free(arr);
 		return (NULL);
+	}
 
-	for (; i < width; i++)
-		arr[i] = malloc(height * sizeof(int));
-
-	if (!arr[0])
-		return (NULL);
-
-	i = 0;
-
-	for (; i < width; i++)
-		for (j = i; j < height; j++)
+	for (; i < height; i++)
+	{
+		arr[i] = (int *)malloc(width * sizeof(int));
+		if (!arr[i])
+		{
+			for (j = 0; j <= i; j++)
+				free(arr[j]);
+			free(arr);
+			return (NULL);
+		}
+		for (j = i; j < width; j++)
 			arr[i][j] = 0;
+	}
 
 
 	return (arr);
