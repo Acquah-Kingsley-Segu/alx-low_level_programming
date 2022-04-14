@@ -1,5 +1,6 @@
 #include "3-calc.h"
-#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * get_op_func - gets operation to be performed
@@ -28,6 +29,9 @@ int (*get_op_func(char *s))(int, int)
 			return (ops[i].f);
 		i++;
 	}
+
+	printf("Error\n");
+	exit(99);
 
 	return (NULL);
 }
