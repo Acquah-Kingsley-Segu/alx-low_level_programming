@@ -1,6 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include <string.h>
 
 /**
  * get_op_func - gets operation to be performed
@@ -23,15 +23,12 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	while (i < 5)
+	while (ops[i].op != NULL)
 	{
-		if (*(ops[i].op) == *s)
-			return (ops[i].f);
+		if (strcmp(s, ops[i].op) == 0)
+			break;
 		i++;
 	}
 
-	printf("Error\n");
-	exit(99);
-
-	return (NULL);
+	return (ops[i].f);
 }
