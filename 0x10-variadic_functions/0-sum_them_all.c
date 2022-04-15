@@ -3,8 +3,8 @@
 
 /**
  * sum_them_all - sums are parameters it receives
- * n: named parameter
- * ...: optional parameters
+ * @n: named parameter
+ * @...: optional parameters
  *
  * Return: Sum of n and all ...
  *
@@ -21,7 +21,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(opt, n);
 
 	if (n == 0)
-		return 0;
+		return (0);
 
 	sum = 0;
 
@@ -31,5 +31,5 @@ int sum_them_all(const unsigned int n, ...)
 		sum += num;
 	}
 
-	return sum;
+	return (sum);
 }
