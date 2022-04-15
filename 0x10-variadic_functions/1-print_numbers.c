@@ -25,12 +25,17 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	if (separator != NULL)
 		c = *separator;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n - 1; i++)
 	{
 		num = va_arg(opt, int);
 
 		printf("%d%c", num, c);
 	}
+
+	num = va_arg(opt, int);
+	printf("%d", num);
+
+	va_end(opt);
 
 	printf("\n");
 
