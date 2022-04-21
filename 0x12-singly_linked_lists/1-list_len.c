@@ -13,15 +13,11 @@ size_t list_len(const list_t *h)
 	int numOfElem = 0;
 	list_t temp = *h;
 
-	if (!h)
-		return (numOfElem);
-
 	while (temp.next)
 	{
 		numOfElem++;
 		temp = *(temp.next);
 	}
 	numOfElem++;
-
 	return (numOfElem);
 }
