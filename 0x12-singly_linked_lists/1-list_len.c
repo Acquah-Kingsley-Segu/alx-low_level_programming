@@ -10,14 +10,9 @@
 
 size_t list_len(const list_t *h)
 {
-	int numOfElem = 0;
-	list_t temp = *h;
+	int i = 0;
 
-	while (temp.next)
-	{
-		numOfElem++;
-		temp = *(temp.next);
-	}
-	numOfElem++;
-	return (numOfElem);
+	for (;h;i++)
+		h = h -> next;
+	return (i);
 }
