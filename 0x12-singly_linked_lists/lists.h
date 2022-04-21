@@ -11,12 +11,13 @@
  * @next: pointer to next node
  *
  */
-typedef struct list_t *nodePtr;
+
 typedef struct list_t
 {
 	char *str;
 	int len;
-	nodePtr next;
+
+	struct list_t *next;
 } list_t;
 
 int _putchar(char c);
