@@ -40,8 +40,14 @@ size_t print_list(const list_t *h)
 	
 
 	if (temp.str != NULL)
+	{
 		printf("[%d] %s\n", temp.len, temp.str);
+		numOfElem++;
+	}
 	else
+	{
 		printf("[0] (nil)\n");
+		numOfElem++;
+	}
 	return (numOfElem);
 }
