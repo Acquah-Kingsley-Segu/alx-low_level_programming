@@ -34,10 +34,9 @@ size_t print_list(const list_t *h)
 			printf("[0] (nil)\n");
 			numOfElem++;
 		}
-		
+
 		temp = *(temp.next);
 	}
-	
 
 	if (temp.str != NULL)
 	{
