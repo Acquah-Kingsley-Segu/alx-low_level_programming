@@ -1,6 +1,12 @@
 #include "lists.h"
 #include <stdlib.h>
 
+/**
+ * free_listint2 - frees memory space
+ * @head: pointe to head pointer
+ *
+ */
+
 void free_listint2(listint_t **head)
 {
 	listint_t *temp;
@@ -11,4 +17,6 @@ void free_listint2(listint_t **head)
 		free(*head);
 		*head = temp;
 	}
+
+	*head = NULL;
 }
