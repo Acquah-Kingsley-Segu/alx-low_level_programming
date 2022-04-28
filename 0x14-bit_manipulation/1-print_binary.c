@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 int significant_bit(unsigned long int);
 
@@ -31,7 +30,6 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 		sig_bit--;
 	}
-	/*printf("Significant bit is: %i\n", sig_bit);*/
 }
 
 /**
