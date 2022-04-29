@@ -17,5 +17,6 @@ divisor = 1 << index;
 check = n & divisor;
 if (check == divisor)
 return (1);
+
 return (0);
 }

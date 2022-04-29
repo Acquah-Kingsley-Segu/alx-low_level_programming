@@ -22,5 +22,6 @@ if (check == (diff & check))
 count++;
 check <<= 1;
 }
+
 return (count);
 }

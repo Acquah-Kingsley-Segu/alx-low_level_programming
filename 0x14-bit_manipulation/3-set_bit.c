@@ -15,5 +15,6 @@ if (index > (sizeof(unsigned long int) * 8 - 1))
 return (-1);
 set = 1 << index;
 *n = *n | set;
+
 return (1);
 }

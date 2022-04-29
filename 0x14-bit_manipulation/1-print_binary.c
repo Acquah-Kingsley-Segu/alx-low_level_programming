@@ -15,6 +15,7 @@ unsigned int i;
 num = 1;
 for (i = 1; i <= power; i++)
 num *= base;
+
 return (num);
 }
 

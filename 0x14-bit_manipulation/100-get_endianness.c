@@ -12,5 +12,6 @@ char *y;
 
 x = 1;
 y = (char *)&x;
+
 return (*y);
 }
