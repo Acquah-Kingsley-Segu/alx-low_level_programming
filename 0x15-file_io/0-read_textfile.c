@@ -22,9 +22,9 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, char_read; /* file descriptor, character read */
-	long unsigned int write_stat; /* write status */
-	char *buf = (char *)malloc(sizeof(char) * (letters + 1)); /* array to hold read characters */
-	
+	unsigned long int write_stat; /* write status */
+	char *buf = (char *)malloc(sizeof(char) * (letters + 1));
+
 	if (filename == NULL)
 		return (0);
 
@@ -37,12 +37,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char_read = read(fd, buf, letters);
 	if (char_read == -1)
 		return (0);
-	
+
 	/* write call to POSIX stdout */
 	write_stat = write(STDOUT_FILENO, buf, letters);
-	if (write_stat == (long unsigned int)-1 || write_stat < letters)
+	if (write_stat == (unsigned long int)-1 || write_stat < letters)
 		return (0);
-	
+
 	free(buf);
 
 	return (char_read);
