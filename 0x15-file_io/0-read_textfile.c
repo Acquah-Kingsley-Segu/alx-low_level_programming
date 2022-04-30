@@ -35,7 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* reading from a file descriptor */
 	char_read = read(fd, buf, letters);
-	if (char_read == -1)
+	if (char_read <= 0)
 		return (0);
 
 	/* write call to POSIX stdout */
