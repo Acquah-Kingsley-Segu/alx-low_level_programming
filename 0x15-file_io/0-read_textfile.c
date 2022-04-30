@@ -21,27 +21,30 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int txt_file, total, read_status;
-	char buffer[BUFSIZE];
+	int fd, char_read; /* file descriptor, character read */
+	unsigned long int write_stat; /* write status */
+	char *buf = (char *)malloc(sizeof(char) * (letters));
 
 	if (filename == NULL)
 		return (0);
-	txt_file = open(filename, O_RDONLY);
-	if (txt_file == -1)
-		return (0);
-	total = 0;
-	read_status = 1;
-	while (letters > BUFSIZE && read_status != 0)
-	{
-		read_status = read(txt_file, buffer, BUFSIZE);
-		write(STDOUT_FILENO, buffer, read_status);
-		total += read_status;
-		letters -= BUFSIZE;
-	}
-	read_status = read(txt_file, buffer, letters);
-	write(STDOUT_FILENO, buffer, read_status);
-	total += read_status;
-	close(txt_file);
 
-	return (total);
+	/* Opening of a file */
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
+
+	/* reading from a file descriptor */
+	char_read = read(fd, buf, letters);
+	if (char_read == -1)
+		return (0);
+
+	/* write call to POSIX stdout */
+	write_stat = write(STDOUT_FILENO, buf, letters);
+	if (write_stat == (unsigned long int)-1 || write_stat < letters)
+		return (0);
+
+	free(buf);
+	close(fd);
+
+	return (char_read);
 }
