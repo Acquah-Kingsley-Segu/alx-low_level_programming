@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, char_read; /* file descriptor, character read */
 	unsigned long int write_stat; /* write status */
-	char *buf = (char *)malloc(sizeof(char) * (letters + 1));
+	char *buf = (char *)malloc(sizeof(char) * (letters));
 
 	if (filename == NULL)
 		return (0);
