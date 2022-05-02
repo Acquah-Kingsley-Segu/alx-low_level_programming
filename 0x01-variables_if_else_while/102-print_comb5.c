@@ -2,9 +2,10 @@
 
 /**
  * main - print all combination os two-digit numbers
+ * Return: 0
  */
 
-int main()
+int main(void)
 {
 	int i, j, quo = 0, rem = 0;
 
@@ -18,7 +19,7 @@ int main()
 			putchar(rem + 48);
 
 			putchar(' ');
-		
+
 			quo = j / 10;
 			rem = j % 10;
 			putchar(quo + 48);
