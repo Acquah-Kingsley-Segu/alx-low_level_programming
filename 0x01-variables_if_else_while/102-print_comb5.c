@@ -25,10 +25,11 @@ int main(void)
 			putchar(quo + 48);
 			putchar(rem + 48);
 
-			if (j == 99 && i == 98)
-				continue;
-			putchar(',');
-			putchar(' ');
+			if (j != 99 || i != 98)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 
