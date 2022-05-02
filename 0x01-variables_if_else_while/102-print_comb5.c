@@ -13,24 +13,23 @@ int main(void)
 	{
 		for (j = i + 1; j < 100; j++)
 		{
-			quo = i / 10;
-			rem = i % 10;
-			putchar(quo + 48);
-			putchar(rem + 48);
-
-			putchar(' ');
-
-			quo = j / 10;
-			rem = j % 10;
-			putchar(quo + 48);
-			putchar(rem + 48);
-
-			if (j != 99 || i != 98)
+			if (i < j && i != j)
 			{
-				putchar(',');
+				quo = i / 10;
+				rem = i % 10;
+				putchar(quo + 48);
+				putchar(rem + 48);
 				putchar(' ');
+				quo = j / 10;
+				rem = j % 10;
+				putchar(quo + 48);
+				putchar(rem + 48);
+				if (j != 99 || i != 98)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-		}
 	}
 
 	return (0);
