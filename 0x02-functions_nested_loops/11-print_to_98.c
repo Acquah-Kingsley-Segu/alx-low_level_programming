@@ -11,8 +11,6 @@ void print_to_98(int n)
 {
 	int add;
 
-	if (n == 98)
-		printf("98\n");
 	if (n < 98)
 		add = 1;
 	else
