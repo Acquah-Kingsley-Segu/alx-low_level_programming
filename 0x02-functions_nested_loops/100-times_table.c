@@ -42,7 +42,8 @@ void _putchar_times(int num)
 
 /**
  * print_num - prints the digits
- * @place: place value
+ * @n: number to print
+ * @loop: loop state for space printing
  *
  */
 void print_num(int n, int loop)
