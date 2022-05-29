@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - finds and prints the sum of the even-valued terms, followed by a new line
+ * main - finds and prints the sum of the even-valued terms,
+ *	  followed by a new line
  *
  * Return: 0
  *
@@ -18,7 +19,7 @@ int main(void)
 			sum += new;
 		prev = crnt;
 		crnt = new;
-		new = prev + crnt;	
+		new = prev + crnt;
 	}
 	printf("%li\n", sum);
 
