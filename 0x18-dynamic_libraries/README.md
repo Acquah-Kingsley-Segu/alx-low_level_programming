@@ -2,7 +2,9 @@
 Steps:
 1. All c-source files `.c` will need to be complied into object files `.o`.
 * `gcc -c -fPIC *.c`
+
 -c option is used to tell the compiler not to link the object files yet
+
 -fPIC option is used to make the library position independent
 
 2. The object files need to be placed into a single shared library
