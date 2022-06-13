@@ -12,7 +12,7 @@ gcc *o -shared -o lib+library_name+.so` in this case **libdynamic.so** *for lib+
 `export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH`
 
 4. To compile out main.c file with the library file we use:
-`gcc -L source.c -llibrary_name -o outputFile`
+..* `gcc -L source.c -llibrary_name -o outputFile`
 
 ** Note: **
 *- we can use "nm -D library.so" to check if the library was created*
